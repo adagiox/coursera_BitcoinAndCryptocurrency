@@ -2,7 +2,7 @@
 Coursera course which teaches the fundamentals of cryptocurrencies.
 https://www.coursera.org/learn/cryptocurrency/
 
-There are three assignments in Java which implement a transaction handler class, a distributed consensus algorithm, and a full node in the network. Each assignemnt contains some starter code.
+There are three assignments in Java which implement a transaction handler class, a distributed consensus algorithm, and a full node which handles the blockchain data structure. Each assignemnt contains some starter code.
 
 
 <p1><b>Assignment 1:</b></p1>
@@ -14,4 +14,4 @@ The goal of Assignment 2 is to implement a CompliantNode class for a distributed
 
 
 <p1><b>Assignment 3:</b></p1>
-Assignment 3 builds off of the concepts of the previous assignment to construct a functional node in our blockchain network. 
+Assignment 3 builds off of the concepts of the previous assignment to construct a functional node in our blockchain network. The node will store the blockchain and be able to update its blockchain, transaction pool, and unspent transaction pool as new blocks are announced to the network. The design of the class efficiently stores blocks, creates an easily traversable and verifiably blockchain, handles forking, and easily adds the coinbase transaction to newly mined blocks. 
