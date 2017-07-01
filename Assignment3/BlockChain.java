@@ -6,15 +6,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class BlockChain {
-    // Block will contain a hash to the previous block
-    
-    // Storing full blocks in the blockStore and updating blockStore on adding new blocks
-    // All blocks are stored by their hash in the blockChain
+    // Store full blocks in the blockStore and update blockStore on adding a block
+    // All blocks are stored by their hash in blockChain
     
     public static final int CUT_OFF_AGE = 10;
-    public ArrayList<ArrayList<Block>> blockStore; // Blocks
-    public HashMap<byte[], byte[]> blockChain; // HashMap Which is a map of the current blocks hash and value of the previous hash
-    public BlockHandler blockHandler;   //      i.e. HashMap<CurrentHash, PrevHash>;
+    public ArrayList<ArrayList<Block>> blockStore; // Blocks being held in memory
+    public HashMap<byte[], byte[]> blockChain; // Map of a block's hash to its previous hash
+    public BlockHandler blockHandler;
     public TxHandler txHandler;
     public TransactionPool currentTXPool;
     public UTXOPool maxUTXOPool;
@@ -23,8 +21,6 @@ public class BlockChain {
      * block
      */
     public BlockChain(Block genesisBlock) {
-        // IMPLEMENT THIS
-       
         blockChain = new HashMap<byte[], byte[]>();
         blockStore = new ArrayList<ArrayList<Block>>();
         blockHandler = new BlockHandler(this);
@@ -37,13 +33,11 @@ public class BlockChain {
 
     /** Get the maximum height block */
     public Block getMaxHeightBlock() {
-        // returns the oldest block at the max height of the blockchain
         return blockStore.get(blockStore.size() - 1).get(0);
     }
 
     /** Get the UTXOPool for mining a new block on top of max height block */
     public UTXOPool getMaxHeightUTXOPool() {
-        // get the corresponding UTXOPool for the longest chain
         return maxUTXOPool;
     }
 
@@ -54,7 +48,7 @@ public class BlockChain {
 
     // Add a block to the blockstore
     // if blockstore is larger than CUT_OFF_AGE, trim the bottom blocks
-    // block is valid
+    // block's tx are valid, but may or may not be able to be added (too old)
     public boolean addBlockStore(Block block)
     {
         int height = 1;
@@ -90,7 +84,6 @@ public class BlockChain {
      * @return true if block is successfully added
      */
     public boolean addBlock(Block block) {
-        // IMPLEMENT THIS
         // If genesis block, return false
         // If the block is deeper than maxHeight - CUT_OFF_AGE
         //      return false
