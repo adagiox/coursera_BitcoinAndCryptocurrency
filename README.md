@@ -2,7 +2,7 @@
 Coursera course which teaches the fundamentals of cryptocurrencies.
 https://www.coursera.org/learn/cryptocurrency/
 
-There are three assignments in Java which implement a [transaction handler](https://github.com/adagiox/coursera_BitcoinAndCryptocurrency/blob/master/Assignment1/TxHandler.java), a [distributed consensus algorithm](https://github.com/adagiox/coursera_BitcoinAndCryptocurrency/blob/master/Assignment2/CompliantNode.java), and a [blockchain full node](https://github.com/adagiox/coursera_BitcoinAndCryptocurrency/blob/master/Assignment3/BlockChain.java) which handles the blockchain data structure. Each assignemnt contains some starter code.
+There are three assignments in Java which implement a [transaction handler](https://github.com/adagiox/coursera_BitcoinAndCryptocurrency/blob/master/Assignment1/TxHandler.java), a [compliant node](https://github.com/adagiox/coursera_BitcoinAndCryptocurrency/blob/master/Assignment2/CompliantNode.java), and a [blockchain full node](https://github.com/adagiox/coursera_BitcoinAndCryptocurrency/blob/master/Assignment3/BlockChain.java) which handles the blockchain data structure. Each assignemnt contains some starter code.
 
 
 <p1><b>Assignment 1:</b></p1>
